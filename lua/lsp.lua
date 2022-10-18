@@ -27,11 +27,12 @@ local lsp_flags = {
     debounce_text_changes = 150,
 }
 
-local cmp = require'cmp'
+local luasnip = require('luasnip')
+local cmp = require('cmp')
 cmp.setup({
     snippet = {
         expand = function(args)
-            require('luasnip').lsp_expand(args.body)
+            luasnip.lsp_expand(args.body)
         end,
     },
     mapping = cmp.mapping.preset.insert({
