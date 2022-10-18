@@ -6,13 +6,14 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.smarttab = true
 
-vim.g.mapleader = ' '
 vim.g.gruvbox_material_transparent_background = 2
 
 require('plugins')
 
 require('mason').setup()
 require('mason-lspconfig').setup()
-require('lspconfig').rust_analyzer.setup({})
+
+require('lsp')
+-- require('cmp')
 
 vim.cmd('colorscheme gruvbox-material')
