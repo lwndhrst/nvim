@@ -13,7 +13,11 @@ require('plugins')
 
 require('mason').setup()
 require('mason-lspconfig').setup()
-require('lsp')
+require('lsp_config')
+
+require('nvim-tree').setup()
+require('bufferline').setup({})
+require('dashboard_config')
 
 require('nvim-treesitter.configs').setup({ highlight = { enable = true }})
 

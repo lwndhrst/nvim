@@ -26,19 +26,18 @@ return require('packer').startup(function(use)
         'saadparwaiz1/cmp_luasnip',
     }
 
-    use 'mfussenegger/nvim-dap'
-
-    use {
-        'jose-elias-alvarez/null-ls.nvim',
-        config = function()
-            require('null-ls').setup()
-        end,
-    }
-
     use { 
         'nvim-treesitter/nvim-treesitter', 
         run = ':TSUpdate',
     }
+
+    use 'mfussenegger/nvim-dap'
+
+    use 'nvim-tree/nvim-tree.lua'
+
+    use { 'akinsho/bufferline.nvim', tag = 'v3.*' }
+
+    use 'glepnir/dashboard-nvim'
 
     use 'sainnhe/gruvbox-material'
 end)
