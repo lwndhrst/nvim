@@ -17,7 +17,7 @@ db.custom_header = {
 db.custom_center = {
     {
         icon =      ' ',
-        desc =      'Find File',
+        desc =      'Find File   ',
         action =    'Telescope find_files',
     },
     {
@@ -27,12 +27,12 @@ db.custom_center = {
     },
     {
         icon =      ' ',
-        desc =      'Search Text',
+        desc =      'Search Text ',
         action =    'Telescope live_grep',
     },
     {
         icon =      ' ',
-        desc =      'Config',
+        desc =      'Config      ',
         action =    'e ~/.config/nvim/init.lua',
     },
 }
