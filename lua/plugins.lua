@@ -26,6 +26,8 @@ return require('packer').startup(function(use)
         'saadparwaiz1/cmp_luasnip',
     }
 
+    use 'lukas-reineke/lsp-format.nvim'
+
     use { 
         'nvim-treesitter/nvim-treesitter', 
         run = ':TSUpdate',

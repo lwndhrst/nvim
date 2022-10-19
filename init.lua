@@ -6,19 +6,16 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.smarttab = true
 vim.o.completeopt = 'menu,menuone,noselect'
+vim.o.mouse = 'a'
 
 vim.g.gruvbox_material_transparent_background = 2
 
 require('plugins')
 
-require('mason').setup()
-require('mason-lspconfig').setup()
+require('mason_config')
 require('lsp_config')
-
-require('nvim-tree').setup()
-require('bufferline').setup({})
 require('dashboard_config')
-
-require('nvim-treesitter.configs').setup({ highlight = { enable = true }})
+-- require('bufferline_config')
+require('treesitter_config')
 
 vim.cmd('colorscheme gruvbox-material')
