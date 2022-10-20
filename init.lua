@@ -20,3 +20,4 @@ require('config.nvim_tree')
 require('config.treesitter')
 
 vim.cmd('colorscheme gruvbox-material')
+vim.cmd('hi TelescopeSelection guibg=#3c3836')
