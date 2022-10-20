@@ -12,10 +12,11 @@ vim.g.gruvbox_material_transparent_background = 2
 
 require('plugins')
 
-require('mason_config')
-require('lsp_config')
-require('dashboard_config')
--- require('bufferline_config')
-require('treesitter_config')
+require('config.mason')
+require('config.lsp')
+require('config.dashboard')
+-- require('config.bufferline')
+require('config.nvim_tree')
+require('config.treesitter')
 
 vim.cmd('colorscheme gruvbox-material')
