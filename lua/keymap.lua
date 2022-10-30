@@ -12,6 +12,7 @@ function M.setup()
     map('n', '<Space>ft', ':Telescope live_grep<CR>', opts)              -- find text
     map('n', '<Space>fs', ':Telescope lsp_document_symbols<CR>', opts)   -- find lsp symbol (current document)
     map('n', '<Space>fg', ':Telescope git_files<CR>', opts)              -- find git files
+    map('n', '<Space>fd', ':Telescope diagnostics<CR>', opts)            -- find diagnostics
 
     -- LSP diagnostics
     map('n', '<Space>e', vim.diagnostic.open_float, opts)
