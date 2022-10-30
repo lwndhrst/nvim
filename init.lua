@@ -17,13 +17,13 @@ vim.g.gruvbox_material_transparent_background = 2
 require('plugins')
 
 -- Set up plugins
-require('plugins.mason')
-require('plugins.lsp')
-require('plugins.cmp')
-require('plugins.dashboard')
-require('plugins.nvim_tree')
-require('plugins.treesitter')
-require('plugins.lualine')
+require('config.mason')
+require('config.lsp')
+require('config.cmp')
+require('config.dashboard')
+require('config.nvim_tree')
+require('config.treesitter')
+require('config.lualine')
 
 -- Load keymap
 require('keymap').setup()
