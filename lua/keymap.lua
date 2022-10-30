@@ -7,10 +7,10 @@ local map = vim.keymap.set
 function M.setup()
     -- Telescope
     map('n', '<Space>ff', ':Telescope find_files<CR>', opts)             -- find files
-    map('n', '<Space>fr', ':Telescope oldfiles<CR>', opts)               -- find recent files
+    map('n', '<Space>fr', ':Telescope oldfiles<CR>', opts)               -- find recent
     map('n', '<Space>fb', ':Telescope buffers<CR>', opts)                -- find buffers
     map('n', '<Space>ft', ':Telescope live_grep<CR>', opts)              -- find text
-    map('n', '<Space>fs', ':Telescope lsp_document_symbols<CR>', opts)   -- find lsp symbol (current document)
+    map('n', '<Space>fs', ':Telescope lsp_document_symbols<CR>', opts)   -- find lsp symbols (current document)
     map('n', '<Space>fg', ':Telescope git_files<CR>', opts)              -- find git files
     map('n', '<Space>fd', ':Telescope diagnostics<CR>', opts)            -- find diagnostics
 
@@ -39,7 +39,7 @@ function M.lsp_buf_maps(buf_nr)
     map('n', '<Space>rn', vim.lsp.buf.rename, buf_opts)
     map('n', '<Space>ca', vim.lsp.buf.code_action, buf_opts)
     map('n', 'gr', vim.lsp.buf.references, buf_opts)
-    map('n', '<Space>F', ':Format<CR>')
+    map('n', '<Space>F', ':Format<CR>', buf_opts)
 end
 
 -- CMP
