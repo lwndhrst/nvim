@@ -39,6 +39,8 @@ return require('packer').startup(function(use)
 
     use { 'akinsho/bufferline.nvim', tag = 'v3.*' }
 
+    use 'nvim-lualine/lualine.nvim'
+
     use 'glepnir/dashboard-nvim'
 
     use 'sainnhe/gruvbox-material'

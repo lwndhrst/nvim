@@ -11,39 +11,9 @@ local lsp_flags = {
     debounce_text_changes = 150,
 }
 
-local luasnip = require('luasnip')
-local cmp = require('cmp')
-cmp.setup({
-    snippet = {
-        expand = function(args)
-            luasnip.lsp_expand(args.body)
-        end,
-    },
-    mapping = cmp.mapping.preset.insert(keymap.cmp_maps()),
-    sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
-        { name = 'buffer' },
-    }),
-})
-
-cmp.setup.cmdline({ '/', '?' }, {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = {
-        { name = 'buffer' },
-    },
-})
-
-cmp.setup.cmdline(':', {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = cmp.config.sources({
-        { name = 'path' },
-        -- { name = 'cmdline' },
-    }),
-})
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+-- Rust
 require('lspconfig').rust_analyzer.setup({
     on_attach = on_attach,
     capabilities = capabilities,
