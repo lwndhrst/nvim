@@ -10,10 +10,10 @@ vim.o.mouse = 'a'
 
 vim.g.gruvbox_material_transparent_background = 2
 
--- load packer
+-- Load packer
 require('plugins')
 
--- set up plugins
+-- Set up plugins
 require('plugins.mason')
 require('plugins.lsp')
 require('plugins.dashboard')
@@ -21,8 +21,8 @@ require('plugins.dashboard')
 require('plugins.nvim_tree')
 require('plugins.treesitter')
 
--- load keymap
-require('keymap')
+-- Load keymap
+require('keymap').setup()
 
 vim.cmd('colorscheme gruvbox-material')
 vim.cmd('hi TelescopeSelection guibg=#202020')
