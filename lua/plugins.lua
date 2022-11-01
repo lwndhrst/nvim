@@ -42,4 +42,9 @@ return require('packer').startup(function(use)
     use 'glepnir/dashboard-nvim'
 
     use 'sainnhe/gruvbox-material'
+
+    use {
+        'catppuccin/nvim',
+        as = 'catppuccin',
+    }
 end)
