@@ -26,5 +26,5 @@ require('config.treesitter')
 require('keymap').setup()
 
 -- Set colorscheme
--- require('themes.gruvbox_material').setup()
-require('themes.catppuccin').setup()
+require('themes.gruvbox_material').setup()
+-- require('themes.catppuccin').setup()
