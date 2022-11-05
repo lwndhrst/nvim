@@ -22,6 +22,10 @@ function M.setup()
 
     -- File explorer
     map('n', '<Space>e', '<Cmd>NvimTreeToggle<CR>', opts)
+
+    -- Navigation
+    map('n', '<C-j>', '<Cmd>bnext<CR>', opts)
+    map('n', '<C-k>', '<Cmd>bprev<CR>', opts)
 end
 
 -- LSP on_attach

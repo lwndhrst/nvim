@@ -1,10 +1,10 @@
 require('lsp-format').setup({})
 
-local keymap = require('keymap')
+local keymaps = require('keymaps')
 
 local on_attach = function(client, buf_nr)
     require('lsp-format').on_attach(client)
-    keymap.lsp_buf_maps(buf_nr)
+    keymaps.lsp_buf_maps(buf_nr)
 end
 
 local lsp_flags = {

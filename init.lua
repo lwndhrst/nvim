@@ -22,8 +22,8 @@ require('config.dashboard')
 require('config.nvim_tree')
 require('config.treesitter')
 
--- Load keymap
-require('keymap').setup()
+-- Load keymaps
+require('keymaps').setup()
 
 -- Set colorscheme
 require('themes.gruvbox_material').setup()

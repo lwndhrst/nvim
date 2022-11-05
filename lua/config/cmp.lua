@@ -1,6 +1,6 @@
 local luasnip = require('luasnip')
 local cmp = require('cmp')
-local keymap = require('keymap')
+local keymaps = require('keymaps')
 
 cmp.setup({
     snippet = {
@@ -8,7 +8,7 @@ cmp.setup({
             luasnip.lsp_expand(args.body)
         end,
     },
-    mapping = cmp.mapping.preset.insert(keymap.cmp_maps()),
+    mapping = cmp.mapping.preset.insert(keymaps.cmp_maps()),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
