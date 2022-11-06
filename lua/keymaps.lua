@@ -32,21 +32,21 @@ end
 function M.lsp_buf_maps(buf_nr)
     local buf_opts = { noremap = true, silent = true, buffer = buf_nr }
 
-    map('n', 'gD', vim.lsp.buf.declaration, buf_opts)
+    -- map('n', 'gD', vim.lsp.buf.declaration, buf_opts)
     map('n', 'gd', vim.lsp.buf.definition, buf_opts)
     map('n', 'K', vim.lsp.buf.hover, buf_opts)
-    map('n', 'gi', vim.lsp.buf.implementation, buf_opts)
-    map('n', '<C-K>', vim.lsp.buf.signature_help, buf_opts)
-    map('n', '<Space>wa', vim.lsp.buf.add_workspace_folder, buf_opts)
-    map('n', '<Space>wr', vim.lsp.buf.remove_workspace_folder, buf_opts)
-    map('n', '<Space>wl', function()
-        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-    end, buf_opts)
-    map('n', '<Space>D', vim.lsp.buf.type_definition, buf_opts)
+    -- map('n', 'gi', vim.lsp.buf.implementation, buf_opts)
+    -- map('n', '<C-K>', vim.lsp.buf.signature_help, buf_opts)
+    -- map('n', '<Space>wa', vim.lsp.buf.add_workspace_folder, buf_opts)
+    -- map('n', '<Space>wr', vim.lsp.buf.remove_workspace_folder, buf_opts)
+    -- map('n', '<Space>wl', function()
+    --     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+    -- end, buf_opts)
+    -- map('n', '<Space>D', vim.lsp.buf.type_definition, buf_opts)
     map('n', '<Space>rn', vim.lsp.buf.rename, buf_opts)
     map('n', '<Space>ca', vim.lsp.buf.code_action, buf_opts)
-    map('n', 'gr', vim.lsp.buf.references, buf_opts)
-    map('n', '<Space>F', ':Format<CR>', buf_opts)                   -- lsp-format.nvim
+    -- map('n', 'gr', vim.lsp.buf.references, buf_opts)
+    map('n', '<Space>F', '<Cmd>Format<CR>', buf_opts)                   -- lsp-format.nvim
 end
 
 -- CMP
