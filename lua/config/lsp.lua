@@ -7,15 +7,15 @@ local on_attach = function(client, buf_nr)
     keymaps.lsp_buf_maps(buf_nr)
 end
 
-local lsp_flags = {
+local lsp = require('lspconfig')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local flags = {
     debounce_text_changes = 150,
 }
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
--- Rust
-require('lspconfig').rust_analyzer.setup({
+-- rust
+lsp.rust_analyzer.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-    flags = lsp_flags,
+    flags = flags,
 })
