@@ -3,7 +3,6 @@ local M = {}
 local opts = { noremap = true, silent = true }
 local map = vim.keymap.set
 
--- generic (called from init.lua)
 function M.setup()
     -- telescope
     local telescope = require('telescope.builtin')
@@ -22,6 +21,21 @@ function M.setup()
 
     -- file explorer
     map('n', '<Space>e', ':NvimTreeToggle<CR>', opts)
+
+    -- harpoon
+    local harpoon_mark = require('harpoon.mark')
+    local harpoon_ui = require('harpoon.ui')
+    map('n', '<Space>ja', harpoon_mark.add_file, opts)              -- add mark for current file
+    map('n', '<Space>jr', harpoon_mark.rm_file, opts)               -- remove mark for current file
+    map('n', '<Space>jR', harpoon_mark.clear_all, opts)             -- remove all marks
+    map('n', '<Space>jl', harpoon_ui.toggle_quick_menu, opts)       -- toggle menu
+    map('n', '<Space>jj', harpoon_ui.nav_next, opts)                -- jump to next mark
+    map('n', '<Space>jk', harpoon_ui.nav_prev, opts)                -- jump to prev mark
+    for i = 1, 9 do
+        local binding = '<Space>j' .. i
+        local cmd = ':lua require("harpoon.ui").nav_file(' .. i .. ')<CR>'
+        map('n', binding, cmd, opts)                                -- jump to specific mark
+    end
 
     -- navigation
     map('n', '<C-j>', ':bnext<CR>', opts)
