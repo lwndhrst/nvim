@@ -33,7 +33,7 @@ function M.setup()
     map('n', '<C-k>', harpoon_ui.nav_prev, opts)                    -- jump to prev mark
     for i = 1, 9 do
         local binding = '<Space>m' .. i
-        local cmd = ':lua require("harpoon.ui").nav_file(' .. i .. ')<CR>'
+        local cmd = function() harpoon_ui.nav_file(i) end
         map('n', binding, cmd, opts)                                -- jump to specific mark
     end
 
@@ -53,7 +53,6 @@ end
 -- lsp on_attach
 function M.lsp_buf_maps(buf_nr)
     local buf_opts = { noremap = true, silent = true, buffer = buf_nr }
-
     map('n', 'gd', vim.lsp.buf.definition, buf_opts)
     map('n', 'K', vim.lsp.buf.hover, buf_opts)
     map('n', '<Space>rn', vim.lsp.buf.rename, buf_opts)
@@ -65,7 +64,6 @@ end
 function M.cmp_maps()
     local luasnip = require('luasnip')
     local cmp = require('cmp')
-
     return {
         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
