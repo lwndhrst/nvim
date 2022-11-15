@@ -5,7 +5,7 @@ function M.setup(theme)
         options = {
             theme = theme,
 
-            -- Unicode powerline glyphs:
+            -- unicode powerline glyphs:
             --     
             --    
             --    

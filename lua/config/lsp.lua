@@ -13,7 +13,6 @@ local flags = {
     debounce_text_changes = 150,
 }
 
--- rust
 lsp.rust_analyzer.setup({
     on_attach = on_attach,
     capabilities = capabilities,

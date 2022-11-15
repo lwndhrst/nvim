@@ -8,13 +8,13 @@ vim.o.smarttab = true
 vim.o.completeopt = 'menu,menuone,noselect'
 vim.o.mouse = 'a'
 
--- Enable global statusline
+-- enable global statusline
 vim.o.laststatus = 3
 
--- Load packer
+-- load packer
 require('plugins')
 
--- Set up plugins
+-- set up plugins
 require('config.mason')
 require('config.lsp')
 require('config.cmp')
@@ -22,9 +22,9 @@ require('config.dashboard')
 require('config.nvim_tree')
 require('config.treesitter')
 
--- Load keymaps
+-- load keymaps
 require('keymaps').setup()
 
--- Set colorscheme
+-- set colorscheme
 require('themes.gruvbox_material').setup()
 -- require('themes.catppuccin').setup()
