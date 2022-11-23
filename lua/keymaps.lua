@@ -25,14 +25,12 @@ function M.setup()
     -- harpoon
     local harpoon_mark = require('harpoon.mark')
     local harpoon_ui = require('harpoon.ui')
-    map('n', '<Space>ma', harpoon_mark.add_file, opts)              -- add mark for current file
-    map('n', '<Space>mr', harpoon_mark.rm_file, opts)               -- remove mark for current file
-    map('n', '<Space>mR', harpoon_mark.clear_all, opts)             -- remove all marks
-    map('n', '<Space>ml', harpoon_ui.toggle_quick_menu, opts)       -- toggle menu
+    map('n', '<Space>ja', harpoon_mark.add_file, opts)              -- add mark for current file
+    map('n', '<Space>jl', harpoon_ui.toggle_quick_menu, opts)       -- toggle menu
     map('n', '<C-j>', harpoon_ui.nav_next, opts)                    -- jump to next mark
     map('n', '<C-k>', harpoon_ui.nav_prev, opts)                    -- jump to prev mark
     for i = 1, 9 do
-        local binding = '<Space>m' .. i
+        local binding = '<Space>j' .. i
         local cmd = function() harpoon_ui.nav_file(i) end
         map('n', binding, cmd, opts)                                -- jump to specific mark
     end
