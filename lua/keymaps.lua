@@ -6,7 +6,7 @@ local map = vim.keymap.set
 function M.setup()
     -- telescope
     local telescope = require('telescope.builtin')
-    map('n', '<Space>ff', telescope.find_files, opts)               -- find files
+    map('n', '<Space>ff', telescope.git_files, opts)               -- find files
     map('n', '<Space>fr', telescope.oldfiles, opts)                 -- find recent
     map('n', '<Space>fb', telescope.buffers, opts)                  -- find buffers
     map('n', '<Space>fg', telescope.live_grep, opts)                -- find grep
