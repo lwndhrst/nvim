@@ -1,7 +1,6 @@
 require("formatter").setup({
-	logging = false,
-	filetype = {
-		lua = { require("formatter.filetypes.lua").stylua },
-		rust = { require("formatter.filetypes.rust").rustfmt },
-	},
+    logging = true,
+    filetype = {
+        rust = { require("formatter.filetypes.rust").rustfmt },
+    },
 })
