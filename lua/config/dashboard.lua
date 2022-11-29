@@ -24,7 +24,7 @@ db.custom_center = {
 	{
 		icon = " ",
 		desc = "Find File   ",
-		action = "Telescope git_files",
+		action = "Telescope find_files",
 	},
 	{
 		icon = " ",
