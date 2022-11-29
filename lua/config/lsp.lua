@@ -18,3 +18,9 @@ lsp.rust_analyzer.setup({
     capabilities = capabilities,
     flags = flags,
 })
+
+lsp.texlab.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = flags,
+})
