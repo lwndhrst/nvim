@@ -4,6 +4,9 @@ local opts = { noremap = true, silent = true }
 local map = vim.keymap.set
 
 function M.setup()
+    -- terminal
+    map("t", "<Esc>", "<C-\\><C-n>", opts) -- exit terminal mode
+
     -- telescope
     local telescope = require("telescope.builtin")
     map("n", "<Space>ff", telescope.find_files, opts) -- find files
@@ -51,7 +54,7 @@ function M.setup()
     map("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
     -- formatter
-    map("n", "<Space>F", ":Format<CR>", opts) -- formatter.nvim
+    map("n", "<Space>F", ":Format<CR>", opts)
 end
 
 -- lsp on_attach
