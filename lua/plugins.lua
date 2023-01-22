@@ -33,4 +33,5 @@ return require("packer").startup(function(use)
     -- themes
     use("sainnhe/gruvbox-material")
     use({ "catppuccin/nvim", as = "catppuccin" })
+    use({ "rose-pine/neovim", as = "rose-pine" })
 end)
