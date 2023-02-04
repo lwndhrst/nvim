@@ -1,37 +1,37 @@
 local M = {}
 
-function M.lualine()
-    local p = require("rose-pine.palette")
+local p = require("rose-pine.palette")
 
+function M.lualine()
     return {
         normal = {
             a = { bg = p.rose, fg = p.base, gui = "bold" },
-            b = { bg = p.base, fg = p.rose },
+            b = { bg = p.overlay, fg = p.rose },
             c = { bg = nil, fg = p.text },
         },
         insert = {
             a = { bg = p.foam, fg = p.base, gui = "bold" },
-            b = { bg = p.base, fg = p.foam },
+            b = { bg = p.overlay, fg = p.foam },
             c = { bg = nil, fg = p.text },
         },
         visual = {
             a = { bg = p.iris, fg = p.base, gui = "bold" },
-            b = { bg = p.base, fg = p.iris },
+            b = { bg = p.overlay, fg = p.iris },
             c = { bg = nil, fg = p.text },
         },
         replace = {
             a = { bg = p.pine, fg = p.base, gui = "bold" },
-            b = { bg = p.base, fg = p.pine },
+            b = { bg = p.overlay, fg = p.pine },
             c = { bg = nil, fg = p.text },
         },
         command = {
             a = { bg = p.love, fg = p.base, gui = "bold" },
-            b = { bg = p.base, fg = p.love },
+            b = { bg = p.overlay, fg = p.love },
             c = { bg = nil, fg = p.text },
         },
         inactive = {
             a = { bg = p.base, fg = p.muted, gui = "bold" },
-            b = { bg = p.base, fg = p.muted },
+            b = { bg = p.overlay, fg = p.muted },
             c = { bg = nil, fg = p.muted },
         },
     }
@@ -45,7 +45,7 @@ function M.setup()
             -- background = "#09080c",
         },
         highlight_groups = {
-            ColorColumn = { bg = "base" },
+            ColorColumn = { bg = p.overlay },
         },
     })
 
