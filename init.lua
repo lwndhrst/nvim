@@ -26,8 +26,6 @@ require("config.dashboard")
 require("config.nvim_tree")
 require("config.treesitter")
 
-require("config.vimtex")
-
 -- load keymaps
 require("keymaps").setup()
 
