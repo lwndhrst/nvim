@@ -18,7 +18,7 @@ vim.o.laststatus = 3
 require("plugins")
 
 -- set up plugins
-require("config.mason")
+-- require("config.mason")
 require("config.lsp")
 require("config.cmp")
 require("config.format")

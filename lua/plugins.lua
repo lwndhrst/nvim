@@ -1,10 +1,11 @@
 return require("packer").startup(function(use)
     use("wbthomason/packer.nvim")
+
     use("nvim-lua/plenary.nvim")
 
     -- lsp, cmp, dap
-    use("williamboman/mason.nvim")
-    use("williamboman/mason-lspconfig.nvim")
+    -- use("williamboman/mason.nvim")
+    -- use("williamboman/mason-lspconfig.nvim")
     use("neovim/nvim-lspconfig")
     use("hrsh7th/cmp-nvim-lsp")
     use("hrsh7th/cmp-buffer")
@@ -20,7 +21,7 @@ return require("packer").startup(function(use)
 
     -- misc
     use("kyazdani42/nvim-web-devicons")
-    use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
+    use({ "nvim-telescope/telescope.nvim", tag = "0.1.1" })
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     use("nvim-tree/nvim-tree.lua")
     use("nvim-lualine/lualine.nvim")
