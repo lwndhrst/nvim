@@ -14,11 +14,7 @@ vim.o.textwidth = "80"
 -- enable global statusline
 vim.o.laststatus = 3
 
--- load packer
-require("plugins")
-
 -- set up plugins
-require("config.mason")
 require("config.lsp")
 require("config.cmp")
 require("config.format")

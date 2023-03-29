@@ -1,15 +1,8 @@
 # dotfiles-nvim
 
-## Prerequisites
-- [NVIM](https://neovim.io/) - v0.8.0
-- [Packer](https://github.com/wbthomason/packer.nvim)
+This config is meant to be used with nix.
+All plugins are installed and managed via nix.
 
-## Installation
-
-```
-git clone https://github.com/leonWindhorst/dotfiles-nvim ~/.config/nvim
-```
-
-```
-nvim +PackerSync
-```
+Some references for how to set it up:
+- [NixNeovim](https://github.com/NixNeovim/NixNeovim)
+- [NixNeovimPlugins](https://github.com/NixNeovim/NixNeovimPlugins)
