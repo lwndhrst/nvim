@@ -14,15 +14,6 @@ vim.o.textwidth = "80"
 -- enable global statusline
 vim.o.laststatus = 3
 
--- set up plugins
-require("config.lsp")
-require("config.cmp")
-require("config.format")
-require("config.dashboard")
-require("config.nvim_tree")
-require("config.treesitter")
-require("config.vimtex")
-
 -- load keymaps
 require("keymaps").setup()
 
