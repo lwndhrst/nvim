@@ -14,6 +14,12 @@ cmp.setup({
         { name = "luasnip" },
         { name = "buffer" },
     }),
+    formatting = {
+        format = function(entry, cmp_item)
+            cmp_item.dup = 0
+            return cmp_item
+        end,
+    },
 })
 
 cmp.setup.cmdline({ "/", "?" }, {
