@@ -2,7 +2,7 @@ local M = {}
 
 local p = require("rose-pine.palette")
 
-function M.lualine()
+function lualine_theme()
     return {
         normal = {
             a = { bg = p.rose, fg = p.base, gui = "bold" },
@@ -50,7 +50,19 @@ function M.setup()
         },
     })
 
-    require("config.lualine").setup(M.lualine())
+    require("lualine").setup({
+        options = {
+            theme = lualine_theme(),
+
+            -- unicode powerline glyphs:
+            --    
+            --    
+            --    
+            --    
+            component_separators = { left = "", right = "" },
+            section_separators = { left = "", right = "" },
+        },
+    })
 
     vim.cmd("colorscheme rose-pine")
 end

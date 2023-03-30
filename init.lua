@@ -19,5 +19,3 @@ require("keymaps").setup()
 
 -- set colorscheme
 require("themes.rose_pine").setup()
--- require("themes.gruvbox_material").setup()
--- require("themes.catppuccin").setup()
