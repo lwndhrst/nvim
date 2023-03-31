@@ -27,6 +27,9 @@ function M.setup()
     map("n", "<Space>e", function()
         if vim.bo.filetype == "netrw" then
             vim.cmd("Rexplore")
+            if vim.bo.filetype == "dashboard" then
+                vim.cmd("Dashboard")
+            end
         else 
             vim.cmd("Explore")
         end

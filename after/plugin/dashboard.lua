@@ -1,3 +1,9 @@
+vim.filetype.add({
+    pattern = {
+        ["Dashboard-.*"] = "dashboard",
+    },
+})
+
 require("dashboard").setup({
     theme = "doom",
     config = {
