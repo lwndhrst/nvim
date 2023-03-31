@@ -30,7 +30,7 @@ function M.setup()
             if vim.bo.filetype == "dashboard" then
                 vim.cmd("Dashboard")
             end
-        else 
+        else
             vim.cmd("Explore")
         end
     end, opts)
