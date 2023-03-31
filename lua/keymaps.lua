@@ -24,7 +24,7 @@ function M.setup()
     map("n", "<Space>q", vim.diagnostic.setloclist, opts)
 
     -- file explorer
-    map("n", "<Space>e", ":NvimTreeToggle<CR>", opts)
+    map("n", "<Space>e", ":Explore<CR>", opts)
 
     -- harpoon
     local harpoon_mark = require("harpoon.mark")
