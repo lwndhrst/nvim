@@ -24,13 +24,21 @@ function M.setup()
     map("n", "<Space>q", vim.diagnostic.setloclist, opts)
 
     -- file explorer
-    map("n", "<Space>e", ":Explore<CR>", opts)
+    map("n", "<Space>e", function()
+        if vim.bo.filetype == "netrw" then
+            vim.cmd("Rexplore")
+        else 
+            vim.cmd("Explore")
+        end
+    end, opts)
 
     -- harpoon
     local harpoon_mark = require("harpoon.mark")
     local harpoon_term = require("harpoon.term")
     local harpoon_ui = require("harpoon.ui")
-    map("n", "<Space>jt", function() harpoon_term.gotoTerminal(1) end, opts) -- jump to term 1
+    map("n", "<Space>jt", function()
+        harpoon_term.gotoTerminal(1)
+    end, opts) -- jump to term 1
     map("n", "<Space>ja", harpoon_mark.add_file, opts) -- add mark for current file
     map("n", "<Space>jl", harpoon_ui.toggle_quick_menu, opts) -- toggle menu
     map("n", "<C-j>", harpoon_ui.nav_next, opts) -- jump to next mark
