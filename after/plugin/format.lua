@@ -1,5 +1,16 @@
 local util = require("formatter.util")
 
+function rustfmt()
+    return {
+        exe = "rustfmt",
+        args = {
+            "--edition",
+            "2021",
+        },
+        stdin = true,
+    }
+end
+
 function stylua()
     return {
         exe = "stylua",
@@ -16,12 +27,12 @@ function stylua()
     }
 end
 
-function rustfmt()
+function zigfmt()
     return {
-        exe = "rustfmt",
+        exe = "zig",
         args = {
-            "--edition",
-            "2021",
+            "fmt",
+            "--stdin",
         },
         stdin = true,
     }
@@ -31,5 +42,6 @@ require("formatter").setup({
     filetype = {
         lua = { stylua },
         rust = { rustfmt },
+        zig = { zigfmt },
     },
 })
