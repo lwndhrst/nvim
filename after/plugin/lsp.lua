@@ -21,3 +21,9 @@ lsp.texlab.setup({
     capabilities = capabilities,
     flags = flags,
 })
+
+lsp.zls.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = flags,
+})
