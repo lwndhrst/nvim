@@ -17,5 +17,8 @@ vim.o.laststatus = 3
 -- load keymaps
 require("keymaps").setup()
 
+-- setup custom filetypes
+require("filetypes")
+
 -- set colorscheme
 require("themes.rose_pine").setup()

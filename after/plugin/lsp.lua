@@ -10,18 +10,28 @@ local flags = {
     debounce_text_changes = 150,
 }
 
+-- odin
+lsp.ols.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = flags,
+})
+
+-- rust
 lsp.rust_analyzer.setup({
     on_attach = on_attach,
     capabilities = capabilities,
     flags = flags,
 })
 
+-- tex
 lsp.texlab.setup({
     on_attach = on_attach,
     capabilities = capabilities,
     flags = flags,
 })
 
+-- zig
 lsp.zls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
