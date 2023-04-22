@@ -1,18 +1,18 @@
-vim.o.number = true
-vim.o.relativenumber = true
-vim.o.termguicolors = true
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
-vim.o.expandtab = true
-vim.o.smarttab = true
-vim.o.completeopt = "menu,menuone,noselect"
-vim.o.mouse = "a"
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.termguicolors = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smarttab = true
+vim.opt.completeopt = "menu,menuone,noselect"
+vim.opt.mouse = "a"
 
--- vim.o.colorcolumn = "80"
-vim.o.textwidth = "80"
+-- vim.o.colorcolumn = 80
+vim.opt.textwidth = 80
 
 -- enable global statusline
-vim.o.laststatus = 3
+vim.opt.laststatus = 3
 
 -- load keymaps
 require("keymaps").setup()
