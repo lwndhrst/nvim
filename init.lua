@@ -8,8 +8,8 @@ vim.opt.smarttab = true
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.mouse = "a"
 
--- vim.o.colorcolumn = 80
-vim.opt.textwidth = 80
+-- vim.opt.colorcolumn = 80
+-- vim.opt.textwidth = 80
 
 -- enable global statusline
 vim.opt.laststatus = 3
