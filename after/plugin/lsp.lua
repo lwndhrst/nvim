@@ -10,6 +10,13 @@ local flags = {
 	debounce_text_changes = 150,
 }
 
+-- c/c++
+lsp.clangd.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	flags = flags,
+})
+
 -- odin
 lsp.ols.setup({
 	on_attach = on_attach,
