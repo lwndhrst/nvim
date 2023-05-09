@@ -59,5 +59,6 @@ require("dashboard").setup({
 				action = "e ~/.config/nvim/init.lua",
 			},
 		},
+		footer = {},
 	},
 })
