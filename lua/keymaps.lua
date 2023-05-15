@@ -54,10 +54,6 @@ function M.setup()
 		map("n", binding, cmd, opts) -- jump to specific mark
 	end
 
-	-- navigation
-	map("n", "<Space>bj", ":bnext<CR>", opts)
-	map("n", "<Space>bk", ":bprev<CR>", opts)
-
 	-- move line/visual
 	map("n", "<A-j>", ":m +1<CR>==", opts)
 	map("n", "<A-k>", ":m -2<CR>==", opts)
