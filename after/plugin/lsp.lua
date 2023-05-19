@@ -17,6 +17,13 @@ lsp.clangd.setup({
 	flags = flags,
 })
 
+-- nix
+lsp.nil_ls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	flags = flags,
+})
+
 -- odin
 lsp.ols.setup({
 	on_attach = on_attach,
