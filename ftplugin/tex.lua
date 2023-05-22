@@ -7,14 +7,14 @@ local map = vim.keymap.set
 
 -- replace latex notation with actual german umlaut and ß characters
 map("n", "<Space>ru", function()
-	vim.cmd([[s/\\"A/Ä/eg]])
-	vim.cmd([[s/\\"a/ä/eg]])
-	vim.cmd([[s/\\"O/Ö/eg]])
-	vim.cmd([[s/\\"o/ö/eg]])
-	vim.cmd([[s/\\"U/Ü/eg]])
-	vim.cmd([[s/\\"u/ü/eg]])
-	vim.cmd([[s/{\\ss}/ß/eg]])
-	vim.cmd([[s/\\ss /ß/eg]])
+	vim.cmd([[%s/\\"A/Ä/eg]])
+	vim.cmd([[%s/\\"a/ä/eg]])
+	vim.cmd([[%s/\\"O/Ö/eg]])
+	vim.cmd([[%s/\\"o/ö/eg]])
+	vim.cmd([[%s/\\"U/Ü/eg]])
+	vim.cmd([[%s/\\"u/ü/eg]])
+	vim.cmd([[%s/{\\ss}/ß/eg]])
+	vim.cmd([[%s/\\ss /ß/eg]])
 end, opts)
 
 -- toggle german spell checking
