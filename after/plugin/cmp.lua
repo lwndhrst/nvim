@@ -16,7 +16,13 @@ cmp.setup({
 	}),
 	formatting = {
 		format = function(entry, cmp_item)
+			-- see :h complete-items
+			-- trim leading whitespace (looking at you clangd <.<)
+			cmp_item.abbr = string.gsub(cmp_item.abbr, "^%s+", "")
+
+			-- remove duplicates
 			cmp_item.dup = 0
+
 			return cmp_item
 		end,
 	},
