@@ -24,7 +24,8 @@ function M.setup()
 	map("n", "<Space>q", vim.diagnostic.setloclist, opts)
 
 	-- ranger
-	map("n", "<Space>rr", ":RangerEdit<CR>", opts)
+	local ranger_nvim = require("ranger-nvim")
+	map("n", "<Space>rr", function() ranger_nvim.open(true) end, opts)
 
 	-- netrw
 	-- map("n", "<Space>e", function()
