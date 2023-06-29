@@ -23,17 +23,20 @@ function M.setup()
 	map("n", "]d", vim.diagnostic.goto_next, opts)
 	map("n", "<Space>q", vim.diagnostic.setloclist, opts)
 
-	-- file explorer
-	map("n", "<Space>e", function()
-		if vim.bo.filetype == "netrw" then
-			vim.cmd("Rexplore")
-			if vim.bo.filetype == "dashboard" then
-				vim.cmd("Dashboard")
-			end
-		else
-			vim.cmd("Explore")
-		end
-	end, opts)
+	-- ranger
+	map("n", "<Space>rr", ":RangerEdit<CR>", opts)
+
+	-- netrw
+	-- map("n", "<Space>e", function()
+	-- 	if vim.bo.filetype == "netrw" then
+	-- 		vim.cmd("Rexplore")
+	-- 		if vim.bo.filetype == "dashboard" then
+	-- 			vim.cmd("Dashboard")
+	-- 		end
+	-- 	else
+	-- 		vim.cmd("Explore")
+	-- 	end
+	-- end, opts)
 
 	-- harpoon
 	local harpoon_mark = require("harpoon.mark")
