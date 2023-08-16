@@ -1,3 +1,3 @@
 require("leetbuddy").setup({
-	language = "c",
+	language = "rs",
 })
