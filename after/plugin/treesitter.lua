@@ -1,3 +1,4 @@
+--[[
 local parser_dir = vim.fn.stdpath("data") .. "/treesitter/parsers"
 vim.opt.runtimepath:append(parser_dir)
 
@@ -7,3 +8,4 @@ require("nvim-treesitter.configs").setup({
 	ignore_install = { "latex" },
 	highlight = { enable = true, disable = { "latex" } },
 })
+]]--
