@@ -8,4 +8,8 @@ require("nvim-treesitter.configs").setup({
 	ignore_install = { "latex" },
 	highlight = { enable = true, disable = { "latex" } },
 })
-]]--
+]]
+
+require("nvim-treesitter.configs").setup({
+	highlight = { enable = true, disable = { "latex" } },
+})
