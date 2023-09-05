@@ -40,8 +40,8 @@ end
 
 require("formatter").setup({
 	filetype = {
-		lua = { stylua },
-		rust = { rustfmt },
-		zig = { zigfmt },
+		lua = stylua,
+		rust = rustfmt,
+		zig = zigfmt,
 	},
 })
