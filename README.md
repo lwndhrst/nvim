@@ -7,4 +7,4 @@ All plugins are installed and managed via nix, but it will still read the config
 Some references for how to set it up:
 - [NixNeovim](https://github.com/NixNeovim/NixNeovim)
 - [NixNeovimPlugins](https://github.com/NixNeovim/NixNeovimPlugins)
-- [My NixOS Neovim Setup](https://github.com/lwndhrst/nixos-config/blob/main/modules/neovim/default.nix)
+- [My NixOS Neovim Setup](https://github.com/lwndhrst/nixos/blob/main/modules/neovim/default.nix)
