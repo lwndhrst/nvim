@@ -1,7 +1,7 @@
 # Personal Configuration for Neovim
 
-This config is meant to be used with nix.
-All plugins are installed and managed via nix, but it will still read the configuration from `$HOME/.config/nvim`.
+This config is meant to be used with [Nix](https://nixos.org/).
+All plugins are installed via [Nix](https://nixos.org/), but it will still read the configuration from `$HOME/.config/nvim`.
 
 
 Some references for how to set it up:
