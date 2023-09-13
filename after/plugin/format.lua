@@ -1,47 +1,13 @@
-local util = require("formatter.util")
+-- https://github.com/mhartington/formatter.nvim
 
-function rustfmt()
-	return {
-		exe = "rustfmt",
-		args = {
-			"--edition",
-			"2021",
-		},
-		stdin = true,
-	}
-end
-
-function stylua()
-	return {
-		exe = "stylua",
-		args = {
-			-- "--indent-type",
-			-- "Spaces",
-			"--search-parent-directories",
-			"--stdin-filepath",
-			util.escape_path(util.get_current_buffer_file_path()),
-			"--",
-			"-",
-		},
-		stdin = true,
-	}
-end
-
-function zigfmt()
-	return {
-		exe = "zig",
-		args = {
-			"fmt",
-			"--stdin",
-		},
-		stdin = true,
-	}
-end
+local filetypes = require("formatter.filetypes")
 
 require("formatter").setup({
 	filetype = {
-		lua = stylua,
-		rust = rustfmt,
-		zig = zigfmt,
+		c = filetypes.c.clangformat,
+		cpp = filetypes.cpp.clangformat,
+		lua = filetypes.lua.stylua,
+		rust = filetypes.rust.rustfmt,
+		zig = filetypes.zig.zigfmt,
 	},
 })

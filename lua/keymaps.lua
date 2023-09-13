@@ -8,6 +8,7 @@ function M.setup()
 	map("t", "<Esc>", "<C-\\><C-n>", opts) -- exit terminal mode
 
 	-- telescope
+	-- https://github.com/nvim-telescope/telescope.nvim
 	local telescope = require("telescope.builtin")
 	map("n", "<Space>ff", telescope.find_files, opts) -- find files
 	map("n", "<Space>fg", telescope.git_files, opts) -- find git files
@@ -24,6 +25,7 @@ function M.setup()
 	map("n", "<Space>q", vim.diagnostic.setloclist, opts)
 
 	-- ranger
+	-- https://github.com/kelly-lin/ranger.nvim
 	local ranger_nvim = require("ranger-nvim")
 	map("n", "<Space>rr", function() ranger_nvim.open(true) end, opts)
 
@@ -40,6 +42,7 @@ function M.setup()
 	-- end, opts)
 
 	-- harpoon
+	-- https://github.com/ThePrimeagen/harpoon
 	local harpoon_mark = require("harpoon.mark")
 	local harpoon_term = require("harpoon.term")
 	local harpoon_ui = require("harpoon.ui")

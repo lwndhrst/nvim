@@ -1,3 +1,5 @@
+-- https://github.com/rose-pine/neovim
+
 local M = {}
 
 local p = require("rose-pine.palette")

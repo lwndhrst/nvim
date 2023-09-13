@@ -1,3 +1,5 @@
+-- https://github.com/neovim/nvim-lspconfig
+
 local keymaps = require("keymaps")
 local lsp = require("lspconfig")
 

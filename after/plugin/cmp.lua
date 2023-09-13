@@ -1,3 +1,15 @@
+-- https://github.com/hrsh7th/nvim-cmp
+--
+-- completion sources
+-- https://github.com/hrsh7th/cmp-nvim-lsp
+-- https://github.com/hrsh7th/cmp-buffer
+-- https://github.com/hrsh7th/cmp-path
+-- https://github.com/hrsh7th/cmp-line
+-- https://github.com/saadparwaiz1/cmp_luasnip
+--
+-- snippet engine
+-- https://github.com/L3MON4D3/LuaSnip
+
 local luasnip = require("luasnip")
 local cmp = require("cmp")
 local keymaps = require("keymaps")

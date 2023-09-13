@@ -1,3 +1,5 @@
+-- https://github.com/nvimdev/dashboard-nvim
+
 vim.filetype.add({
 	pattern = {
 		["Dashboard-.*"] = "dashboard",
