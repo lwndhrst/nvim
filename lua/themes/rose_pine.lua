@@ -1,4 +1,5 @@
 -- https://github.com/rose-pine/neovim
+-- https://github.com/nvim-lualine/lualine.nvim
 
 local M = {}
 
