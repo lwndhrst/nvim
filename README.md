@@ -1,4 +1,4 @@
-# dotfiles-nvim
+# Personal Configuration for Neovim
 
 This config is meant to be used with nix.
 All plugins are installed and managed via nix, but it will still read the configuration from `$HOME/.config/nvim`.
