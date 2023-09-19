@@ -9,5 +9,9 @@ require("formatter").setup({
 		lua = filetypes.lua.stylua,
 		rust = filetypes.rust.rustfmt,
 		zig = filetypes.zig.zigfmt,
+
+		-- has to be enabled per project via ols.json
+		-- "enable_format": true
+		odin = vim.lsp.buf.format,
 	},
 })
