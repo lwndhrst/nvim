@@ -11,11 +11,14 @@ vim.opt.mouse = "a"
 -- enable global statusline
 vim.opt.laststatus = 3
 
+-- setup custom filetypes
+require("filetypes")
+
 -- load keymaps
 require("keymaps").setup()
 
--- setup custom filetypes
-require("filetypes")
+-- load autocmds
+require("autocmds")
 
 -- set colorscheme
 require("themes.rose_pine").setup()
