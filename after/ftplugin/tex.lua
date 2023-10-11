@@ -6,7 +6,7 @@ local opts = { noremap = true, silent = true, buffer = buf_nr }
 local map = vim.keymap.set
 
 -- replace latex notation with actual german umlaut and ß characters
-map("n", "<Space>ru", function()
+map("n", "<SPACE>ru", function()
 	vim.cmd([[%s/\\"A/Ä/eg]])
 	vim.cmd([[%s/\\"a/ä/eg]])
 	vim.cmd([[%s/\\"O/Ö/eg]])
@@ -18,4 +18,4 @@ map("n", "<Space>ru", function()
 end, opts)
 
 -- toggle german spell checking
-map("n", "<Space>sp", ":setlocal spell! spelllang=de<CR>", opts)
+map("n", "<SPACE>sp", ":setlocal spell! spelllang=de<CR>", opts)
