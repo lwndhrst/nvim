@@ -85,7 +85,7 @@ function M.cmp_maps()
 		["<C-e>"] = cmp.mapping.abort(),
 		["<CR>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
-			select = true,
+			select = false,
 		}),
 		["<TAB>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
