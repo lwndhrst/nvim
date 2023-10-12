@@ -37,12 +37,12 @@ function M.setup()
 	local harpoon_term = require("harpoon.term")
 	local harpoon_ui = require("harpoon.ui")
 	local harpoon_cmdui = require("harpoon.cmd-ui")
-	map("n", "<SPACE>jt", function()
+	map("n", "<SPACE>t", function()
 		harpoon_term.gotoTerminal(1)
 	end, opts) -- jump to term 1
-	map("n", "<SPACE>jc", harpoon_cmdui.toggle_quick_menu, opts) -- command ui
-	map("n", "<SPACE>ja", harpoon_mark.add_file, opts) -- add mark for current file
-	map("n", "<SPACE>jl", harpoon_ui.toggle_quick_menu, opts) -- mark ui
+	map("n", "<SPACE>cl", harpoon_cmdui.toggle_quick_menu, opts) -- command ui
+	map("n", "<SPACE>ma", harpoon_mark.add_file, opts) -- add mark for current file
+	map("n", "<SPACE>ml", harpoon_ui.toggle_quick_menu, opts) -- mark ui
 	map("n", "<C-j>", harpoon_ui.nav_next, opts) -- jump to next mark
 	map("n", "<C-k>", harpoon_ui.nav_prev, opts) -- jump to prev mark
 	for i = 1, 9 do
