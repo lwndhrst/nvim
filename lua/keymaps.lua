@@ -53,17 +53,13 @@ function M.setup()
 		map("n", binding, cmd, opts) -- jump to specific mark
 	end
 
-	-- move line/visual
+	-- move line/selection
 	map("n", "<A-j>", ":m +1<CR>==", opts)
 	map("n", "<A-k>", ":m -2<CR>==", opts)
 	map("i", "<A-j>", "<ESC>:m +1<CR>==gi", opts)
 	map("i", "<A-k>", "<ESC>:m -2<CR>==gi", opts)
 	map("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 	map("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
-
-	-- windows
-	map("n", "<A-h>", ":vertical resize -4<CR>", opts)
-	map("n", "<A-l>", ":vertical resize +4<CR>", opts)
 
 	-- run formatter (configured by after/plugin/format.lua)
 	map("n", "<SPACE>F", ":Format<CR>", opts)
