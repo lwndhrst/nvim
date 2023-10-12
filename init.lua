@@ -7,6 +7,7 @@ vim.opt.expandtab = true
 vim.opt.smarttab = true
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.mouse = "a"
+vim.opt.wrap = false
 
 -- enable global statusline
 vim.opt.laststatus = 3

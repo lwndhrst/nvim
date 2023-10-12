@@ -61,7 +61,11 @@ function M.setup()
 	map("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 	map("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
-	-- formatter
+	-- windows
+	map("n", "<A-h>", ":vertical resize -4<CR>", opts)
+	map("n", "<A-l>", ":vertical resize +4<CR>", opts)
+
+	-- run formatter (configured by after/plugin/format.lua)
 	map("n", "<SPACE>F", ":Format<CR>", opts)
 end
 
