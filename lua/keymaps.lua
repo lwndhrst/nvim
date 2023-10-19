@@ -18,12 +18,6 @@ function M.setup()
 	map("n", "<SPACE>fs", telescope.lsp_document_symbols, opts) -- find lsp symbols (current document)
 	map("n", "<SPACE>fd", telescope.diagnostics, opts) -- find diagnostics
 
-	-- lsp diagnostics
-	map("n", "<SPACE>d", vim.diagnostic.open_float, opts)
-	map("n", "[d", vim.diagnostic.goto_prev, opts)
-	map("n", "]d", vim.diagnostic.goto_next, opts)
-	map("n", "<SPACE>q", vim.diagnostic.setloclist, opts)
-
 	-- ranger
 	-- https://github.com/kelly-lin/ranger.nvim
 	local ranger_nvim = require("ranger-nvim")
@@ -61,7 +55,13 @@ function M.setup()
 	map("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 	map("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
-	-- run formatter (configured by after/plugin/format.lua)
+	-- diagnostics
+	map("n", "<SPACE>d", vim.diagnostic.open_float, opts)
+	map("n", "[d", vim.diagnostic.goto_prev, opts)
+	map("n", "]d", vim.diagnostic.goto_next, opts)
+	map("n", "<SPACE>q", vim.diagnostic.setloclist, opts)
+
+	-- formatter (configured by after/plugin/format.lua)
 	map("n", "<SPACE>F", ":Format<CR>", opts)
 end
 
@@ -69,6 +69,7 @@ end
 function M.lsp_buf_maps(buf_nr)
 	local buf_opts = { noremap = true, silent = true, buffer = buf_nr }
 	map("n", "gd", vim.lsp.buf.definition, buf_opts)
+	map("n", "gi", vim.lsp.buf.implementation, buf_opts)
 	map("n", "K", vim.lsp.buf.hover, buf_opts)
 	map("n", "<SPACE>rn", vim.lsp.buf.rename, buf_opts)
 	map("n", "<SPACE>ca", vim.lsp.buf.code_action, buf_opts)
@@ -81,8 +82,6 @@ function M.cmp_maps()
 	return {
 		["<C-d>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
-		["<C-SPACE>"] = cmp.mapping.complete(),
-		["<C-e>"] = cmp.mapping.abort(),
 		["<CR>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = false,
