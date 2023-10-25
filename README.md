@@ -6,4 +6,4 @@ All plugins are installed using [Nix](https://nixos.org/), but configuration wil
 Some references for how to set it up:
 - [NixNeovim](https://github.com/NixNeovim/NixNeovim)
 - [NixNeovimPlugins](https://github.com/NixNeovim/NixNeovimPlugins)
-- [My NixOS Neovim Setup](https://github.com/lwndhrst/home-manager-config/blob/main/modules/neovim/default.nix)
+- [My NixOS Neovim Setup](https://github.com/lwndhrst/nixos-config/blob/main/modules/neovim/default.nix)
