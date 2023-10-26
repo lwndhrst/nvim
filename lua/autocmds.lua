@@ -1,13 +1,10 @@
 local autocmd = vim.api.nvim_create_autocmd
 
 autocmd("TermOpen", {
-	callback = function()
-		vim.wo.number = false
-		vim.wo.relativenumber = false
-	end,
+	command = "setlocal nonumber norelativenumber",
 })
 
--- only for computer graphics exercise
+-- only for uni computer graphics exercise
 autocmd({ "BufRead", "BufEnter" }, {
 	pattern = {
 		"/home/leon/Projects/cg1-exercise/**/*.cpp",
