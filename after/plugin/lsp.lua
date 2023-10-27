@@ -13,11 +13,10 @@ local default_config = {
 	flags = { debounce_text_changes = 150 },
 }
 
-local clangd_config = vim.deepcopy(default_config)
-clangd_config.cmd = { "clangd", "--header-insertion=never" }
-
 -- c/c++
-lsp.clangd.setup(clangd_config)
+lsp.clangd.setup(vim.tbl_extend("error", default_config, {
+	cmd = { "clangd", "--header-insertion=never" },
+}))
 
 -- glsl
 lsp.glslls.setup(default_config)
