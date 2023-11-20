@@ -18,6 +18,9 @@ lsp.clangd.setup(vim.tbl_extend("error", default_config, {
 	cmd = { "clangd", "--header-insertion=never" },
 }))
 
+-- gdscript
+lsp.gdscript.setup(default_config)
+
 -- glsl
 lsp.glslls.setup(default_config)
 
