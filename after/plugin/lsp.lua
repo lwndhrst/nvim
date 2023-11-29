@@ -34,6 +34,9 @@ lsp.nil_ls.setup(default_config)
 -- odin
 lsp.ols.setup(default_config)
 
+-- python
+lsp.pyright.setup(default_config)
+
 -- rust
 lsp.rust_analyzer.setup(default_config)
 
