@@ -15,6 +15,9 @@ vim.opt.laststatus = 3
 -- setup custom filetypes
 require("filetypes")
 
+-- plugin manager
+require("lazy")
+
 -- load keymaps
 require("keymaps").setup()
 
