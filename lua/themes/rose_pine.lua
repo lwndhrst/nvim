@@ -42,10 +42,10 @@ end
 
 function M.setup()
 	require("rose-pine").setup({
-		disable_background = true,
+		-- disable_background = true,
 		disable_italics = true,
 		groups = {
-			-- background = "#0c0b11",
+			background = "#0c0b11",
 			-- background = "#09080c",
 		},
 		highlight_groups = {

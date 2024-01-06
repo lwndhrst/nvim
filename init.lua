@@ -9,6 +9,8 @@ vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.mouse = "a"
 vim.opt.wrap = false
 
+vim.opt.guifont = "Cascadia Mono:h13"
+
 -- enable global statusline
 vim.opt.laststatus = 3
 

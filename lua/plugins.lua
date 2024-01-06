@@ -15,7 +15,6 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 	"nvim-lua/plenary.nvim",
-
 	"neovim/nvim-lspconfig",
 	"hrsh7th/nvim-cmp",
 	"hrsh7th/cmp-nvim-lsp",
@@ -24,11 +23,8 @@ local plugins = {
 	"hrsh7th/cmp-cmdline",
 	"saadparwaiz1/cmp_luasnip",
 	"L3MON4D3/LuaSnip",
-
-	"mhartington/formatter.nvim",
-
 	"nvim-treesitter/nvim-treesitter",
-
+	"mhartington/formatter.nvim",
 	"nvim-telescope/telescope.nvim",
 	"nvim-lualine/lualine.nvim",
 	"nvimdev/dashboard-nvim",
@@ -36,6 +32,13 @@ local plugins = {
 	"folke/todo-comments.nvim",
 	"kelly-lin/ranger.nvim",
 	"ThePrimeagen/harpoon",
+
+	{
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
+	},
 
 	"rose-pine/neovim",
 }
