@@ -30,7 +30,7 @@ local plugins = {
 	"nvimdev/dashboard-nvim",
 	"NvChad/nvim-colorizer.lua",
 	"folke/todo-comments.nvim",
-	"kelly-lin/ranger.nvim",
+	-- "kelly-lin/ranger.nvim",
 	"ThePrimeagen/harpoon",
 
 	{
