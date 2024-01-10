@@ -20,10 +20,12 @@ function M.setup()
 
 	-- ranger
 	-- https://github.com/kelly-lin/ranger.nvim
-	-- local ranger_nvim = require("ranger-nvim")
-	-- map("n", "<SPACE>rr", function()
-	-- 	ranger_nvim.open(true)
-	-- end, opts)
+	--[[
+	local ranger_nvim = require("ranger-nvim")
+	map("n", "<SPACE>rr", function()
+		ranger_nvim.open(true)
+	end, opts)
+	--]]
 	
 	-- netrw
 	map("n", "<SPACE>e", ":Lexplore<CR>", opts)
