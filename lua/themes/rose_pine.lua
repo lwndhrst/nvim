@@ -51,7 +51,14 @@ function M.setup()
 		},
 
 		highlight_groups = {
-			-- VertSplit = { fg = "muted", bg = "muted" },
+			TelescopeBorder = { fg = "highlight_high", bg = "base" },
+			TelescopeNormal = { bg = "base" },
+			TelescopePromptNormal = { bg = "base" },
+			TelescopeResultsNormal = { fg = "subtle", bg = "base" },
+			TelescopeSelection = { fg = "text", bg = "base" },
+			-- TelescopeSelectionCaret = { fg = "rose", bg = "rose" },
+			
+			CmpItemMenuDefault = { bg = "base" },
 		},
 	})
 
