@@ -58,7 +58,7 @@ function M.setup()
 			TelescopeSelection = { fg = "text", bg = "base" },
 			-- TelescopeSelectionCaret = { fg = "rose", bg = "rose" },
 			
-			CmpItemMenuDefault = { bg = "base" },
+			NormalFloat = { bg = "base" },
 		},
 	})
 

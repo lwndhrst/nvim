@@ -14,12 +14,10 @@ local luasnip = require("luasnip")
 local cmp = require("cmp")
 local keymaps = require("keymaps")
 
-vim.api.nvim_set_hl(0, "CmpNormal", { link = "TelescopeNormal" })
-
 cmp.setup({
 	window = {
 		completion = {
-			winhighlight = "Normal:CmpNormal",
+			winhighlight = "Normal:NormalFloat",
 		},
 	},
 	snippet = {
