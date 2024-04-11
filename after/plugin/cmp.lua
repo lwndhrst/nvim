@@ -15,6 +15,11 @@ local cmp = require("cmp")
 local keymaps = require("keymaps")
 
 cmp.setup({
+	window = {
+		completion = {
+			winhighlight = "Normal:NormalFloat",
+		},
+	},
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)

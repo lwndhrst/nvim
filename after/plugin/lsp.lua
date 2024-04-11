@@ -32,7 +32,7 @@ lsp.gdscript.setup(vim.tbl_extend("error", default_config, {
 }))
 
 -- glsl
-lsp.glslls.setup(default_config)
+-- lsp.glslls.setup(default_config)
 
 -- nix
 lsp.nil_ls.setup(default_config)
