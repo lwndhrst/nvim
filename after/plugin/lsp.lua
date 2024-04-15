@@ -18,6 +18,9 @@ lsp.clangd.setup(vim.tbl_extend("error", default_config, {
 	cmd = { "clangd", "--header-insertion=never" },
 }))
 
+-- c# (unity)
+lsp.omnisharp.setup(default_config)
+
 -- gdscript lsp
 local gdscript_addr = os.getenv("GDScript_Addr") or "127.0.0.1"
 local gdscript_port = os.getenv("GDScript_Port") or "6005"
