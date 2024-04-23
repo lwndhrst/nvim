@@ -57,6 +57,8 @@ function M.setup()
 			TelescopeResultsNormal = { fg = "subtle", bg = "base" },
 			TelescopeSelection = { fg = "text", bg = "base" },
 			-- TelescopeSelectionCaret = { fg = "rose", bg = "rose" },
+
+			Floaterm = { bg = "base" },
 			
 			NormalFloat = { bg = "base" },
 		},

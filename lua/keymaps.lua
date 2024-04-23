@@ -7,6 +7,10 @@ function M.setup()
 	-- terminal
 	map("t", "<ESC>", "<C-\\><C-n>", opts)
 
+	-- floaterm
+	-- https://github.com/voldikss/vim-floaterm
+	map("n", "<SPACE>t", ":FloatermToggle<CR>", opts)
+
 	-- telescope
 	-- https://github.com/nvim-telescope/telescope.nvim
 	local telescope = require("telescope.builtin")
