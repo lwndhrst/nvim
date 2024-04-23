@@ -5,18 +5,18 @@ local map = vim.keymap.set
 
 function M.setup()
 	-- terminal
-	map("t", "<ESC>", "<C-\\><C-n>", opts) -- exit terminal mode
+	map("t", "<ESC>", "<C-\\><C-n>", opts)
 
 	-- telescope
 	-- https://github.com/nvim-telescope/telescope.nvim
 	local telescope = require("telescope.builtin")
-	map("n", "<SPACE>ff", telescope.find_files, opts) -- find files
-	map("n", "<SPACE>fg", telescope.git_files, opts) -- find git files
-	map("n", "<SPACE>fr", telescope.oldfiles, opts) -- find recent
-	map("n", "<SPACE>fb", telescope.buffers, opts) -- find buffers
-	map("n", "<SPACE>ft", telescope.live_grep, opts) -- find text (grep)
-	map("n", "<SPACE>fs", telescope.lsp_document_symbols, opts) -- find lsp symbols (current document)
-	map("n", "<SPACE>fd", telescope.diagnostics, opts) -- find diagnostics
+	map("n", "<SPACE>ff", telescope.find_files, opts)
+	map("n", "<SPACE>fg", telescope.git_files, opts)
+	map("n", "<SPACE>fr", telescope.oldfiles, opts)
+	map("n", "<SPACE>fb", telescope.buffers, opts)
+	map("n", "<SPACE>ft", telescope.live_grep, opts)
+	map("n", "<SPACE>fs", telescope.lsp_document_symbols, opts)
+	map("n", "<SPACE>fd", telescope.diagnostics, opts)
 
 	-- ranger
 	-- https://github.com/kelly-lin/ranger.nvim
@@ -27,29 +27,26 @@ function M.setup()
 	end, opts)
 	--]]
 	
+	-- lf
+	-- https://github.com/ptzz/lf.vim
+	map("n", "<SPACE>rr", ":Lf<CR>", opts)
+	
 	-- netrw
 	map("n", "<SPACE>e", ":Lexplore<CR>", opts)
 
 	-- harpoon
 	-- https://github.com/ThePrimeagen/harpoon
-	local harpoon_mark = require("harpoon.mark")
-	local harpoon_term = require("harpoon.term")
-	local harpoon_ui = require("harpoon.ui")
-	local harpoon_cmdui = require("harpoon.cmd-ui")
-	map("n", "<SPACE>t", function()
-		harpoon_term.gotoTerminal(1)
-	end, opts) -- jump to term 1
-	map("n", "<SPACE>cl", harpoon_cmdui.toggle_quick_menu, opts) -- command ui
-	map("n", "<SPACE>ma", harpoon_mark.add_file, opts) -- add mark for current file
-	map("n", "<SPACE>ml", harpoon_ui.toggle_quick_menu, opts) -- mark ui
-	map("n", "<C-j>", harpoon_ui.nav_next, opts) -- jump to next mark
-	map("n", "<C-k>", harpoon_ui.nav_prev, opts) -- jump to prev mark
+	local harpoon = require("harpoon")
+	map("n", "<SPACE>ma", function() harpoon:list():add() end, opts)
+	map("n", "<SPACE>ml", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, opts)
+	map("n", "<C-j>", function() harpoon:list():next() end, opts)
+	map("n", "<C-k>", function() harpoon:list():prev() end, opts)
 	for i = 1, 9 do
 		local binding = "<SPACE>j" .. i
 		local cmd = function()
-			harpoon_ui.nav_file(i)
+			harpoon:list():select(i)
 		end
-		map("n", binding, cmd, opts) -- jump to specific mark
+		map("n", binding, cmd, opts)
 	end
 
 	-- move line/selection

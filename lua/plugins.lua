@@ -30,8 +30,22 @@ local plugins = {
 	"nvimdev/dashboard-nvim",
 	"NvChad/nvim-colorizer.lua",
 	"folke/todo-comments.nvim",
+
 	-- "kelly-lin/ranger.nvim",
-	"ThePrimeagen/harpoon",
+	-- {
+	-- 	"ptzz/lf.vim",
+	-- 	dependencies = { "voldikss/vim-floaterm" },
+	-- },
+	{
+		"voldikss/vim-floaterm",
+		dependencies = { "ptzz/lf.vim" },
+	},
+
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 
 	"williamboman/mason-lspconfig.nvim",
 	{
