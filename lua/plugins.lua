@@ -32,10 +32,6 @@ local plugins = {
 	"folke/todo-comments.nvim",
 
 	-- "kelly-lin/ranger.nvim",
-	-- {
-	-- 	"ptzz/lf.vim",
-	-- 	dependencies = { "voldikss/vim-floaterm" },
-	-- },
 	{
 		"voldikss/vim-floaterm",
 		dependencies = { "ptzz/lf.vim" },
