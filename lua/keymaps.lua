@@ -7,10 +7,6 @@ function M.setup()
 	-- terminal
 	map("t", "<ESC>", "<C-\\><C-n>", opts)
 
-	-- floaterm
-	-- https://github.com/voldikss/vim-floaterm
-	map("n", "<SPACE>t", ":FloatermToggle<CR>", opts)
-
 	-- telescope
 	-- https://github.com/nvim-telescope/telescope.nvim
 	local telescope = require("telescope.builtin")
@@ -21,20 +17,10 @@ function M.setup()
 	map("n", "<SPACE>ft", telescope.live_grep, opts)
 	map("n", "<SPACE>fs", telescope.lsp_document_symbols, opts)
 	map("n", "<SPACE>fd", telescope.diagnostics, opts)
-
-	-- ranger
-	-- https://github.com/kelly-lin/ranger.nvim
-	-- local ranger_nvim = require("ranger-nvim")
-	-- map("n", "<SPACE>rr", function()
-	-- 	ranger_nvim.open(true)
-	-- end, opts)
 	
-	-- lf
-	-- https://github.com/ptzz/lf.vim
-	map("n", "<SPACE>rr", ":Lf<CR>", opts)
-	
-	-- netrw
-	map("n", "<SPACE>e", ":Lexplore<CR>", opts)
+	-- oil
+	-- https://github.com/stevearc/oil.nvim
+	map("n", "<SPACE>o", ":Oil --float<CR>", opts)
 
 	-- harpoon
 	-- https://github.com/ThePrimeagen/harpoon

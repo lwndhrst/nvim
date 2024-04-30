@@ -59,8 +59,9 @@ function M.setup()
 			-- TelescopeSelectionCaret = { fg = "rose", bg = "rose" },
 
 			Floaterm = { bg = "base" },
-			
+
 			NormalFloat = { bg = "base" },
+			FloatBorder = { bg = "base" },
 		},
 	})
 
