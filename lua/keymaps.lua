@@ -6,6 +6,7 @@ local map = vim.keymap.set
 function M.setup()
 	-- terminal
 	map("t", "<ESC>", "<C-\\><C-n>", opts)
+	map("n", "<SPACE>t", require("terminal").open_term, opts)
 
 	-- telescope
 	-- https://github.com/nvim-telescope/telescope.nvim
@@ -17,7 +18,7 @@ function M.setup()
 	map("n", "<SPACE>ft", telescope.live_grep, opts)
 	map("n", "<SPACE>fs", telescope.lsp_document_symbols, opts)
 	map("n", "<SPACE>fd", telescope.diagnostics, opts)
-	
+
 	-- oil
 	-- https://github.com/stevearc/oil.nvim
 	map("n", "<SPACE>o", ":Oil --float<CR>", opts)
@@ -25,10 +26,18 @@ function M.setup()
 	-- harpoon
 	-- https://github.com/ThePrimeagen/harpoon
 	local harpoon = require("harpoon")
-	map("n", "<SPACE>ma", function() harpoon:list():add() end, opts)
-	map("n", "<SPACE>ml", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, opts)
-	map("n", "<C-j>", function() harpoon:list():next() end, opts)
-	map("n", "<C-k>", function() harpoon:list():prev() end, opts)
+	map("n", "<SPACE>ma", function()
+		harpoon:list():add()
+	end, opts)
+	map("n", "<SPACE>ml", function()
+		harpoon.ui:toggle_quick_menu(harpoon:list())
+	end, opts)
+	map("n", "<C-j>", function()
+		harpoon:list():next()
+	end, opts)
+	map("n", "<C-k>", function()
+		harpoon:list():prev()
+	end, opts)
 	for i = 1, 9 do
 		local binding = "<SPACE>j" .. i
 		local cmd = function()
