@@ -21,7 +21,7 @@ function M.setup()
 
 	-- oil
 	-- https://github.com/stevearc/oil.nvim
-	map("n", "<SPACE>o", ":Oil --float<CR>", opts)
+	map("n", "<SPACE>o", ":Oil<CR>", opts)
 
 	-- harpoon
 	-- https://github.com/ThePrimeagen/harpoon
