@@ -65,7 +65,8 @@ function M.setup()
 
 		before_highlight = function(group, highlight, palette)
 			if highlight.bg == palette.base then
-				highlight.bg = "#0c0b11"
+				-- highlight.bg = "#0c0b11"
+				highlight.bg = nil
 			end
 		end,
 	})
