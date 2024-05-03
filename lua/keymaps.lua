@@ -5,8 +5,9 @@ local map = vim.keymap.set
 
 function M.setup()
 	-- terminal
+	local terminal = require("terminal")
 	map("t", "<ESC>", "<C-\\><C-n>", opts)
-	map("n", "<SPACE>t", require("terminal").open_term, opts)
+	map("n", "<SPACE>t", terminal.open_term, opts)
 
 	-- telescope
 	-- https://github.com/nvim-telescope/telescope.nvim
