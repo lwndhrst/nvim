@@ -40,7 +40,7 @@ lsp.gdscript.setup(vim.tbl_extend("error", default_config, {
 }))
 
 -- glsl
-lsp.glslls.setup(default_config)
+lsp.glsl_analyzer.setup(default_config)
 
 -- lua
 lsp.lua_ls.setup(vim.tbl_extend("error", default_config, {
