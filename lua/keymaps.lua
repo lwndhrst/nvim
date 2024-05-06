@@ -62,7 +62,10 @@ function M.setup()
 	map("n", "<SPACE>q", vim.diagnostic.setloclist, opts)
 
 	-- formatter (configured by after/plugin/format.lua)
-	map("n", "<SPACE>F", ":Format<CR>", opts)
+	local conform = require("conform")
+	map("n", "<SPACE>F", function()
+		conform.format({ lsp_fallback = true })
+	end, opts)
 end
 
 -- lsp on_attach

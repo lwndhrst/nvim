@@ -25,9 +25,9 @@ local plugins = {
 	"saadparwaiz1/cmp_luasnip",
 	"L3MON4D3/LuaSnip",
 	"nvim-treesitter/nvim-treesitter",
-	"mhartington/formatter.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"williamboman/mason.nvim",
+	"stevearc/conform.nvim",
 
 	"nvim-telescope/telescope.nvim",
 	"stevearc/oil.nvim",
