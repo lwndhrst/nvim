@@ -27,10 +27,10 @@ function M.setup()
 	-- harpoon
 	-- https://github.com/ThePrimeagen/harpoon
 	local harpoon = require("harpoon")
-	map("n", "<SPACE>ma", function()
+	map("n", "<SPACE>ha", function()
 		harpoon:list():add()
 	end, opts)
-	map("n", "<SPACE>ml", function()
+	map("n", "<SPACE>hl", function()
 		harpoon.ui:toggle_quick_menu(harpoon:list())
 	end, opts)
 	map("n", "<C-j>", function()
@@ -40,7 +40,7 @@ function M.setup()
 		harpoon:list():prev()
 	end, opts)
 	for i = 1, 9 do
-		local binding = "<SPACE>j" .. i
+		local binding = "<SPACE>h" .. i
 		local cmd = function()
 			harpoon:list():select(i)
 		end
