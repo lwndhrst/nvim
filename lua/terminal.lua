@@ -1,3 +1,7 @@
+if vim.fn.has("Win32") then
+	vim.opt.shell = "pwsh"
+end
+
 local Terminal = {}
 
 local function create_term(terminal)
