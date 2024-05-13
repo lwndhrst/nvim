@@ -1,5 +1,5 @@
 if vim.fn.has("Win32") then
-	vim.opt.shell = "pwsh"
+	vim.opt.shell = "pwsh -NoLogo"
 end
 
 local Terminal = {}
