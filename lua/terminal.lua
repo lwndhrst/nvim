@@ -1,7 +1,7 @@
--- this breaks when plugins and other commands assume cmd.exe
--- if vim.fn.has("Win32") then
--- 	vim.opt.shell = "pwsh -NoLogo"
--- end
+if vim.fn.has("Win32") then
+	vim.opt.shell = "pwsh -NoLogo"
+	vim.opt.shellcmdflag = "-Command"
+end
 
 local Terminal = {}
 
