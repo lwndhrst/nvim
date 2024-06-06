@@ -1,4 +1,4 @@
-if vim.fn.has("Win32") then
+if vim.fn.has("Win32") == 1 then
 	vim.opt.shell = "pwsh -NoLogo"
 	vim.opt.shellcmdflag = "-Command"
 end
