@@ -5,7 +5,7 @@ local M = {}
 
 local p = require("rose-pine.palette")
 
-function lualine_theme()
+local function lualine_theme()
 	return {
 		normal = {
 			a = { bg = p.rose, fg = p.base, gui = "bold" },
@@ -45,21 +45,30 @@ function M.setup()
 		variant = "main",
 
 		styles = {
-			bold = true,
+			bold = false,
 			italic = false,
-			transparency = true,
+			transparency = false,
 		},
 
 		highlight_groups = {
-			TelescopeBorder = { fg = "highlight_high", bg = "base" },
-			TelescopeNormal = { bg = "base" },
-			TelescopePromptNormal = { bg = "base" },
-			TelescopeResultsNormal = { fg = "subtle", bg = "base" },
-			TelescopeSelection = { fg = "text", bg = "base" },
-			-- TelescopeSelectionCaret = { fg = "rose", bg = "rose" },
-			
-			NormalFloat = { bg = "base" },
+			-- 	TelescopeBorder = { fg = "highlight_high", bg = "base" },
+			-- 	TelescopeNormal = { bg = "base" },
+			-- 	TelescopePromptNormal = { bg = "base" },
+			-- 	TelescopeResultsNormal = { fg = "subtle", bg = "base" },
+			-- 	TelescopeSelection = { fg = "text", bg = "base" },
+			TelescopeSelectionCaret = { fg = "rose", bg = "rose" },
+
+			--  NormalFloat = { bg = "base" },
+			--  FloatBorder = { bg = "base" },
+			FloatTitle = { fg = "foam", bg = "surface" },
 		},
+
+		before_highlight = function(group, highlight, palette)
+			if highlight.bg == palette.base then
+				-- highlight.bg = "#0c0b11"
+				highlight.bg = nil
+			end
+		end,
 	})
 
 	require("lualine").setup({

@@ -58,7 +58,9 @@ require("dashboard").setup({
 				icon_hl = "@String",
 				desc = " Config      ",
 				desc_hl = "@String",
-				action = "e ~/.config/nvim/init.lua",
+				action = function()
+					require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
+				end,
 			},
 		},
 		footer = {},

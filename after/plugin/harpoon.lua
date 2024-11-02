@@ -1,5 +1,5 @@
-require("harpoon").setup({
-	global_settings = {
-		enter_on_sendcmd = true,
-	},
-})
+-- https://github.com/ThePrimeagen/harpoon
+
+local harpoon = require("harpoon")
+
+harpoon:setup()
