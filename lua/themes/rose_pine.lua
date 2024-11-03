@@ -61,6 +61,9 @@ function M.setup()
 				overlay = "#203039",
 				muted = "#495863",
 				subtle = "#999fa5",
+				highlight_low = "#0f2129",
+				highlight_med = "#203039",
+				highlight_high = "#495863",
 			},
 		},
 
