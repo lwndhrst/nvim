@@ -21,7 +21,15 @@ lsp.clangd.setup(vim.tbl_extend("error", default_config, {
 }))
 
 -- c#
-lsp.omnisharp.setup(default_config)
+local omnisharp_cmd = nil
+if vim.fn.has("win32") == 1 then
+	omnisharp_cmd = { "dotnet", "/path/to/omnisharp/OmniSharp.dll" }
+else
+	omnisharp_cmd = { "OmniSharp" }
+end
+lsp.omnisharp.setup(vim.tbl_extend("error", default_config, {
+	cmd = omnisharp_cmd,
+}))
 
 -- gdscript
 local gdscript_addr = os.getenv("GDScript_Addr") or "127.0.0.1"
